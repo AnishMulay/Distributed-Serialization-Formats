@@ -1,0 +1,3 @@
+/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/benchmark_app.dir
+/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/edit_cache.dir
+/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/rebuild_cache.dir
