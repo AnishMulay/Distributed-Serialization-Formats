@@ -142,6 +142,49 @@ test_data_generator_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/build
 .PHONY : test_data_generator_test/fast
 
+#=============================================================================
+# Target rules for targets named benchmark_runner_test
+
+# Build rule for target.
+benchmark_runner_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmark_runner_test
+.PHONY : benchmark_runner_test
+
+# fast build rule for target.
+benchmark_runner_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/build
+.PHONY : benchmark_runner_test/fast
+
+src/common/benchmark_runner.o: src/common/benchmark_runner.cpp.o
+.PHONY : src/common/benchmark_runner.o
+
+# target to build an object file
+src/common/benchmark_runner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/benchmark_runner.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.o
+.PHONY : src/common/benchmark_runner.cpp.o
+
+src/common/benchmark_runner.i: src/common/benchmark_runner.cpp.i
+.PHONY : src/common/benchmark_runner.i
+
+# target to preprocess a source file
+src/common/benchmark_runner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/benchmark_runner.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.i
+.PHONY : src/common/benchmark_runner.cpp.i
+
+src/common/benchmark_runner.s: src/common/benchmark_runner.cpp.s
+.PHONY : src/common/benchmark_runner.s
+
+# target to generate assembly for a file
+src/common/benchmark_runner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/benchmark_runner.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.s
+.PHONY : src/common/benchmark_runner.cpp.s
+
 src/common/test_data_generator.o: src/common/test_data_generator.cpp.o
 .PHONY : src/common/test_data_generator.o
 
@@ -149,6 +192,7 @@ src/common/test_data_generator.o: src/common/test_data_generator.cpp.o
 src/common/test_data_generator.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.o
 .PHONY : src/common/test_data_generator.cpp.o
 
 src/common/test_data_generator.i: src/common/test_data_generator.cpp.i
@@ -158,6 +202,7 @@ src/common/test_data_generator.i: src/common/test_data_generator.cpp.i
 src/common/test_data_generator.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.i
 .PHONY : src/common/test_data_generator.cpp.i
 
 src/common/test_data_generator.s: src/common/test_data_generator.cpp.s
@@ -167,6 +212,7 @@ src/common/test_data_generator.s: src/common/test_data_generator.cpp.s
 src/common/test_data_generator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.s
 .PHONY : src/common/test_data_generator.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -192,6 +238,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/tests/benchmark_runner_test.o: src/tests/benchmark_runner_test.cpp.o
+.PHONY : src/tests/benchmark_runner_test.o
+
+# target to build an object file
+src/tests/benchmark_runner_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/tests/benchmark_runner_test.cpp.o
+.PHONY : src/tests/benchmark_runner_test.cpp.o
+
+src/tests/benchmark_runner_test.i: src/tests/benchmark_runner_test.cpp.i
+.PHONY : src/tests/benchmark_runner_test.i
+
+# target to preprocess a source file
+src/tests/benchmark_runner_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/tests/benchmark_runner_test.cpp.i
+.PHONY : src/tests/benchmark_runner_test.cpp.i
+
+src/tests/benchmark_runner_test.s: src/tests/benchmark_runner_test.cpp.s
+.PHONY : src/tests/benchmark_runner_test.s
+
+# target to generate assembly for a file
+src/tests/benchmark_runner_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/tests/benchmark_runner_test.cpp.s
+.PHONY : src/tests/benchmark_runner_test.cpp.s
 
 src/tests/test_data_generator_test.o: src/tests/test_data_generator_test.cpp.o
 .PHONY : src/tests/test_data_generator_test.o
@@ -226,13 +296,20 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... benchmark_app"
+	@echo "... benchmark_runner_test"
 	@echo "... test_data_generator_test"
+	@echo "... src/common/benchmark_runner.o"
+	@echo "... src/common/benchmark_runner.i"
+	@echo "... src/common/benchmark_runner.s"
 	@echo "... src/common/test_data_generator.o"
 	@echo "... src/common/test_data_generator.i"
 	@echo "... src/common/test_data_generator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/tests/benchmark_runner_test.o"
+	@echo "... src/tests/benchmark_runner_test.i"
+	@echo "... src/tests/benchmark_runner_test.s"
 	@echo "... src/tests/test_data_generator_test.o"
 	@echo "... src/tests/test_data_generator_test.i"
 	@echo "... src/tests/test_data_generator_test.s"

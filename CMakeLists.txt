@@ -17,6 +17,7 @@ find_package(MsgPack REQUIRED)
 # Common source files
 set(COMMON_SOURCES
     src/common/test_data_generator.cpp
+    src/common/benchmark_runner.cpp
 )
 
 # Main application executable
@@ -34,5 +35,11 @@ target_link_libraries(benchmark_app
 # Test data generator test
 add_executable(test_data_generator_test
     src/tests/test_data_generator_test.cpp
+    ${COMMON_SOURCES}
+)
+
+# Benchmark runner test
+add_executable(benchmark_runner_test
+    src/tests/benchmark_runner_test.cpp
     ${COMMON_SOURCES}
 )

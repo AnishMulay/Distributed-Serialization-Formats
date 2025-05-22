@@ -164,4 +164,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/benchmark_app.dir/DependInfo.cmake"
   "CMakeFiles/test_data_generator_test.dir/DependInfo.cmake"
+  "CMakeFiles/benchmark_runner_test.dir/DependInfo.cmake"
   )

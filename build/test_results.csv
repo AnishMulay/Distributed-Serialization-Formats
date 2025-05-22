@@ -1,0 +1,5 @@
+Format,Operation,DataSizeBytes,SerializedSizeBytes,DurationMs
+MockFormat,metadata_serialization,92,12,0.000144
+MockFormat,metadata_deserialization,0,12,0.000095
+MockFormat,block_serialization,1044,1024,0.000177
+MockFormat,block_deserialization,0,1024,0.000182
