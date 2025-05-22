@@ -1,12 +1,9 @@
-benchmark_app: \
+test_data_generator_test: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
-  CMakeFiles/benchmark_app.dir/src/main.cpp.o \
-  CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o \
-  /usr/lib/x86_64-linux-gnu/libprotobuf.so \
-  /usr/lib/x86_64-linux-gnu/libmsgpackc.so.2.0.0 \
-  /usr/lib/x86_64-linux-gnu/libpugixml.so.1.14 \
+  CMakeFiles/test_data_generator_test.dir/src/tests/test_data_generator_test.cpp.o \
+  CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
@@ -42,15 +39,9 @@ benchmark_app: \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
-CMakeFiles/benchmark_app.dir/src/main.cpp.o:
+CMakeFiles/test_data_generator_test.dir/src/tests/test_data_generator_test.cpp.o:
 
-CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o:
-
-/usr/lib/x86_64-linux-gnu/libprotobuf.so:
-
-/usr/lib/x86_64-linux-gnu/libmsgpackc.so.2.0.0:
-
-/usr/lib/x86_64-linux-gnu/libpugixml.so.1.14:
+CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so:
 

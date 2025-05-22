@@ -129,6 +129,46 @@ benchmark_app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/build
 .PHONY : benchmark_app/fast
 
+#=============================================================================
+# Target rules for targets named test_data_generator_test
+
+# Build rule for target.
+test_data_generator_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_data_generator_test
+.PHONY : test_data_generator_test
+
+# fast build rule for target.
+test_data_generator_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/build
+.PHONY : test_data_generator_test/fast
+
+src/common/test_data_generator.o: src/common/test_data_generator.cpp.o
+.PHONY : src/common/test_data_generator.o
+
+# target to build an object file
+src/common/test_data_generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.o
+.PHONY : src/common/test_data_generator.cpp.o
+
+src/common/test_data_generator.i: src/common/test_data_generator.cpp.i
+.PHONY : src/common/test_data_generator.i
+
+# target to preprocess a source file
+src/common/test_data_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.i
+.PHONY : src/common/test_data_generator.cpp.i
+
+src/common/test_data_generator.s: src/common/test_data_generator.cpp.s
+.PHONY : src/common/test_data_generator.s
+
+# target to generate assembly for a file
+src/common/test_data_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.s
+.PHONY : src/common/test_data_generator.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -153,6 +193,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/tests/test_data_generator_test.o: src/tests/test_data_generator_test.cpp.o
+.PHONY : src/tests/test_data_generator_test.o
+
+# target to build an object file
+src/tests/test_data_generator_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/tests/test_data_generator_test.cpp.o
+.PHONY : src/tests/test_data_generator_test.cpp.o
+
+src/tests/test_data_generator_test.i: src/tests/test_data_generator_test.cpp.i
+.PHONY : src/tests/test_data_generator_test.i
+
+# target to preprocess a source file
+src/tests/test_data_generator_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/tests/test_data_generator_test.cpp.i
+.PHONY : src/tests/test_data_generator_test.cpp.i
+
+src/tests/test_data_generator_test.s: src/tests/test_data_generator_test.cpp.s
+.PHONY : src/tests/test_data_generator_test.s
+
+# target to generate assembly for a file
+src/tests/test_data_generator_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/tests/test_data_generator_test.cpp.s
+.PHONY : src/tests/test_data_generator_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +226,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... benchmark_app"
+	@echo "... test_data_generator_test"
+	@echo "... src/common/test_data_generator.o"
+	@echo "... src/common/test_data_generator.i"
+	@echo "... src/common/test_data_generator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/tests/test_data_generator_test.o"
+	@echo "... src/tests/test_data_generator_test.i"
+	@echo "... src/tests/test_data_generator_test.s"
 .PHONY : help
 
 
