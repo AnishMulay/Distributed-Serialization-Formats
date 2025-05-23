@@ -1,50 +1,164 @@
 #include "formats/json/json_serializer.h"
-#include <string>
+#include <algorithm>
+#include <stdexcept>
+#include "common/utilities.h"
 
 namespace benchmark {
 
+// RFC 4648 compliant Base64 implementation
+namespace {
+    const std::string base64_chars = 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz"
+        "0123456789+/";
+
+    std::string base64_encode(const std::vector<uint8_t>& data) {
+        std::string encoded;
+        int i = 0, j = 0;
+        unsigned char char_array_3[3], char_array_4[4];
+
+        for (const auto& byte : data) {
+            char_array_3[i++] = byte;
+            if (i == 3) {
+                char_array_4[0] = (char_array_3[0] & 0xfc) >> 2;
+                char_array_4[1] = ((char_array_3[0] & 0x03) << 4) + 
+                                 ((char_array_3[1] & 0xf0) >> 4);
+                char_array_4[2] = ((char_array_3[1] & 0x0f) << 2) + 
+                                 ((char_array_3[2] & 0xc0) >> 6);
+                char_array_4[3] = char_array_3[2] & 0x3f;
+
+                for (i = 0; i < 4; i++)
+                    encoded += base64_chars[char_array_4[i]];
+                i = 0;
+            }
+        }
+
+        if (i) {
+            for (j = i; j < 3; j++)
+                char_array_3[j] = 0;
+
+            char_array_4[0] = (char_array_3[0] & 0xfc) >> 2;
+            char_array_4[1] = ((char_array_3[0] & 0x03) << 4) + 
+                             ((char_array_3[1] & 0xf0) >> 4);
+            char_array_4[2] = ((char_array_3[1] & 0x0f) << 2) + 
+                             ((char_array_3[2] & 0xc0) >> 6);
+
+            for (j = 0; j < i + 1; j++)
+                encoded += base64_chars[char_array_4[j]];
+
+            while (i++ < 3)
+                encoded += '=';
+        }
+
+        return encoded;
+    }
+
+    std::vector<uint8_t> base64_decode(const std::string& encoded) {
+        size_t in_len = encoded.size();
+        int i = 0, j = 0, in_ = 0;
+        unsigned char char_array_4[4], char_array_3[3];
+        std::vector<uint8_t> decoded;
+
+        while (in_len-- && encoded[in_] != '=') {
+            char_array_4[i++] = encoded[in_]; in_++;
+            if (i == 4) {
+                for (i = 0; i < 4; i++)
+                    char_array_4[i] = static_cast<unsigned char>(
+                        base64_chars.find(char_array_4[i]));
+
+                char_array_3[0] = (char_array_4[0] << 2) + 
+                                  ((char_array_4[1] & 0x30) >> 4);
+                char_array_3[1] = ((char_array_4[1] & 0xf) << 4) + 
+                                  ((char_array_4[2] & 0x3c) >> 2);
+                char_array_3[2] = ((char_array_4[2] & 0x3) << 6) + 
+                                   char_array_4[3];
+
+                for (i = 0; i < 3; i++)
+                    decoded.push_back(char_array_3[i]);
+                i = 0;
+            }
+        }
+
+        if (i) {
+            for (j = 0; j < i; j++)
+                char_array_4[j] = static_cast<unsigned char>(
+                    base64_chars.find(char_array_4[j]));
+
+            char_array_3[0] = (char_array_4[0] << 2) + 
+                              ((char_array_4[1] & 0x30) >> 4);
+            char_array_3[1] = ((char_array_4[1] & 0xf) << 4) + 
+                              ((char_array_4[2] & 0x3c) >> 2);
+
+            for (j = 0; j < i - 1; j++)
+                decoded.push_back(char_array_3[j]);
+        }
+
+        return decoded;
+    }
+}
+
 std::vector<uint8_t> JsonSerializer::serialize_metadata(const FileMetadata& metadata) {
-    // Convert metadata to JSON
-    nlohmann::json j = metadata_to_json(metadata);
+    nlohmann::json j;
+    j["name"] = metadata.name;
+    j["path"] = metadata.path;
+    j["size"] = metadata.size;
+    j["created_at"] = metadata.created_at;
+    j["last_modified"] = metadata.last_modified;
+    j["tags"] = metadata.tags;
+    j["permissions"] = metadata.permissions;
+    j["owner"] = metadata.owner;
+    j["group"] = metadata.group;
     
-    // Convert JSON to string
     std::string json_str = j.dump();
-    
-    // Convert string to vector<uint8_t>
     return std::vector<uint8_t>(json_str.begin(), json_str.end());
 }
 
 FileMetadata JsonSerializer::deserialize_metadata(const std::vector<uint8_t>& data) {
-    // Convert vector<uint8_t> to string
     std::string json_str(data.begin(), data.end());
+    auto j = nlohmann::json::parse(json_str);
     
-    // Parse JSON
-    nlohmann::json j = nlohmann::json::parse(json_str);
+    FileMetadata metadata;
+    metadata.name = j["name"].get<std::string>();
+    metadata.path = j["path"].get<std::string>();
+    metadata.size = j["size"].get<uint64_t>();
+    metadata.created_at = j["created_at"].get<time_t>();
+    metadata.last_modified = j["last_modified"].get<time_t>();
+    metadata.tags = j["tags"].get<std::vector<std::string>>();
+    metadata.permissions = j["permissions"].get<uint32_t>();
+    metadata.owner = j["owner"].get<std::string>();
+    metadata.group = j["group"].get<std::string>();
     
-    // Convert JSON to metadata
-    return json_to_metadata(j);
+    return metadata;
 }
 
 std::vector<uint8_t> JsonSerializer::serialize_block(const FileBlock& block) {
-    // Convert block to JSON
-    nlohmann::json j = block_to_json(block);
+    nlohmann::json j;
+    j["block_id"] = block.block_id;
+    j["offset"] = block.offset;
+    j["data"] = base64_encode(block.data);
+    j["checksum"] = block.checksum;
     
-    // Convert JSON to string
     std::string json_str = j.dump();
-    
-    // Convert string to vector<uint8_t>
     return std::vector<uint8_t>(json_str.begin(), json_str.end());
 }
 
 FileBlock JsonSerializer::deserialize_block(const std::vector<uint8_t>& data) {
-    // Convert vector<uint8_t> to string
     std::string json_str(data.begin(), data.end());
+    auto j = nlohmann::json::parse(json_str);
     
-    // Parse JSON
-    nlohmann::json j = nlohmann::json::parse(json_str);
+    FileBlock block;
+    block.block_id = j["block_id"].get<std::string>();
+    block.offset = j["offset"].get<uint64_t>();
+    block.data = base64_decode(j["data"].get<std::string>());
+    block.checksum = j["checksum"].get<uint32_t>();
     
-    // Convert JSON to block
-    return json_to_block(j);
+    // Verify checksum
+    uint32_t calculated = calculate_checksum(block.data);
+    if (calculated != block.checksum) {
+        throw std::runtime_error("Checksum mismatch after deserialization");
+    }
+    
+    return block;
 }
 
 nlohmann::json JsonSerializer::metadata_to_json(const FileMetadata& metadata) {

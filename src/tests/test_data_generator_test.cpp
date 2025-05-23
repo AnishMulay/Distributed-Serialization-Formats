@@ -2,6 +2,7 @@
 #include <cassert>
 #include <set>
 #include "common/test_data_generator.h"
+#include "common/utilities.h"
 
 using namespace benchmark;
 

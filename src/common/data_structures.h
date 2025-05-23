@@ -4,6 +4,7 @@
 #include <vector>
 #include <ctime>
 #include <cstdint>
+#include "utilities.h"
 
 namespace benchmark {
 
@@ -68,6 +69,10 @@ struct FileBlock {
         , checksum(0)
     {}
     
+    bool validate_checksum() const {
+        return benchmark::calculate_checksum(data) == checksum;
+    }
+
     // Check if two blocks are equal (for testing)
     bool operator==(const FileBlock& other) const {
         return block_id == other.block_id &&

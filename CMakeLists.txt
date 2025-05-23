@@ -18,10 +18,16 @@ find_package(MsgPack REQUIRED)
 set(COMMON_SOURCES
     src/common/test_data_generator.cpp
     src/common/benchmark_runner.cpp
+    src/common/utilities.cpp
+)
+
+# Format-specific source files
+set(JSON_SOURCES
+    src/formats/json/json_serializer.cpp
 )
 
 # Main application executable
-add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES})
+add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES} ${JSON_SOURCES})
 
 # Link libraries
 target_link_libraries(benchmark_app
@@ -42,4 +48,16 @@ add_executable(test_data_generator_test
 add_executable(benchmark_runner_test
     src/tests/benchmark_runner_test.cpp
     ${COMMON_SOURCES}
+)
+
+# JSON serializer test
+add_executable(json_serializer_test
+    src/tests/json_serializer_test.cpp
+    ${JSON_SOURCES}
+    ${COMMON_SOURCES}
+)
+
+target_link_libraries(json_serializer_test
+    PRIVATE
+    nlohmann_json::nlohmann_json
 )

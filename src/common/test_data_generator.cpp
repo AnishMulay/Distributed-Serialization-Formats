@@ -79,7 +79,7 @@ FileBlock TestDataGenerator::generate_block(size_t size_bytes, uint64_t offset) 
                   [this]() { return byte_dist_(rng_); });
     
     // Calculate checksum
-    block.checksum = calculate_checksum(block.data);
+    block.checksum = benchmark::calculate_checksum(block.data);
     
     return block;
 }
@@ -118,18 +118,6 @@ std::string TestDataGenerator::random_string(size_t length) {
     }
     
     return result;
-}
-
-uint32_t TestDataGenerator::calculate_checksum(const std::vector<uint8_t>& data) {
-    // Simple Adler-32 checksum
-    uint32_t a = 1, b = 0;
-    
-    for (const auto& byte : data) {
-        a = (a + byte) % 65521;
-        b = (b + a) % 65521;
-    }
-    
-    return (b << 16) | a;
 }
 
 } // namespace benchmark

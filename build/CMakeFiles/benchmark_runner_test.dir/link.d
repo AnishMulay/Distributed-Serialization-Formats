@@ -5,6 +5,7 @@ benchmark_runner_test: \
   CMakeFiles/benchmark_runner_test.dir/src/tests/benchmark_runner_test.cpp.o \
   CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.o \
   CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.o \
+  CMakeFiles/benchmark_runner_test.dir/src/common/utilities.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
@@ -45,6 +46,8 @@ CMakeFiles/benchmark_runner_test.dir/src/tests/benchmark_runner_test.cpp.o:
 CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.o:
 
 CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.o:
+
+CMakeFiles/benchmark_runner_test.dir/src/common/utilities.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so:
 

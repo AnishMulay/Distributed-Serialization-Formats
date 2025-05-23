@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/anish/Anish/Projects/Distributed-Serialization-Formats/src/common/benchmark_runner.cpp" "CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o" "gcc" "CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o.d"
   "/home/anish/Anish/Projects/Distributed-Serialization-Formats/src/common/test_data_generator.cpp" "CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o" "gcc" "CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o.d"
+  "/home/anish/Anish/Projects/Distributed-Serialization-Formats/src/common/utilities.cpp" "CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o" "gcc" "CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o.d"
+  "/home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/json/json_serializer.cpp" "CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o" "gcc" "CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o.d"
   "/home/anish/Anish/Projects/Distributed-Serialization-Formats/src/main.cpp" "CMakeFiles/benchmark_app.dir/src/main.cpp.o" "gcc" "CMakeFiles/benchmark_app.dir/src/main.cpp.o.d"
   "" "benchmark_app" "gcc" "CMakeFiles/benchmark_app.dir/link.d"
   )

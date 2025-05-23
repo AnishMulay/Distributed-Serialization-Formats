@@ -5,6 +5,8 @@ benchmark_app: \
   CMakeFiles/benchmark_app.dir/src/main.cpp.o \
   CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o \
   CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o \
+  CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o \
+  CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o \
   /usr/lib/x86_64-linux-gnu/libprotobuf.so \
   /usr/lib/x86_64-linux-gnu/libmsgpackc.so.2.0.0 \
   /usr/lib/x86_64-linux-gnu/libpugixml.so.1.14 \
@@ -48,6 +50,10 @@ CMakeFiles/benchmark_app.dir/src/main.cpp.o:
 CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o:
 
 CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o:
+
+CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o:
+
+CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libprotobuf.so:
 
