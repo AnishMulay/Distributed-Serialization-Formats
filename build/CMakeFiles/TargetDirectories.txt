@@ -3,5 +3,6 @@
 /home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/benchmark_runner_test.dir
 /home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/json_serializer_test.dir
 /home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/xml_serializer_test.dir
+/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/protobuf_serializer_test.dir
 /home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/edit_cache.dir
 /home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles/rebuild_cache.dir

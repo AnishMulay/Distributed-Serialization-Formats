@@ -156,6 +156,34 @@ CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/xml/xml_serializer.cpp -o CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.s
 
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o: CMakeFiles/benchmark_app.dir/flags.make
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o: /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/protobuf_serializer.cpp
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o: CMakeFiles/benchmark_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o -MF CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o.d -o CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o -c /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/protobuf_serializer.cpp
+
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/protobuf_serializer.cpp > CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.i
+
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/protobuf_serializer.cpp -o CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.s
+
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o: CMakeFiles/benchmark_app.dir/flags.make
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o: /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o: CMakeFiles/benchmark_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o -MF CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o.d -o CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o -c /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc
+
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc > CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.i
+
+CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc -o CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.s
+
 # Object files for target benchmark_app
 benchmark_app_OBJECTS = \
 "CMakeFiles/benchmark_app.dir/src/main.cpp.o" \
@@ -163,7 +191,9 @@ benchmark_app_OBJECTS = \
 "CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o" \
 "CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o" \
 "CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o" \
-"CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o"
+"CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o" \
+"CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o" \
+"CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o"
 
 # External object files for target benchmark_app
 benchmark_app_EXTERNAL_OBJECTS =
@@ -174,13 +204,15 @@ benchmark_app: CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o
 benchmark_app: CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o
 benchmark_app: CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o
 benchmark_app: CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o
+benchmark_app: CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o
+benchmark_app: CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o
 benchmark_app: CMakeFiles/benchmark_app.dir/build.make
 benchmark_app: CMakeFiles/benchmark_app.dir/compiler_depend.ts
 benchmark_app: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 benchmark_app: /usr/lib/x86_64-linux-gnu/libmsgpackc.so.2.0.0
 benchmark_app: /usr/lib/x86_64-linux-gnu/libpugixml.so.1.14
 benchmark_app: CMakeFiles/benchmark_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable benchmark_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/anish/Anish/Projects/Distributed-Serialization-Formats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable benchmark_app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/benchmark_app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

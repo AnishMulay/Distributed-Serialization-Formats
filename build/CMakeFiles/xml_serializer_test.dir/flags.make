@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/anish/Anish/Projects/Distributed-Serialization-Formats/src
+CXX_INCLUDES = -I/home/anish/Anish/Projects/Distributed-Serialization-Formats/src -I/home/anish/Anish/Projects/Distributed-Serialization-Formats/src/formats/protobuf/generated
 
 CXX_FLAGS =  -Wall -Werror -O3 -std=gnu++17
 

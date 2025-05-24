@@ -14,6 +14,26 @@ find_package(PugiXML REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(MsgPack REQUIRED)
 
+# Generate Protocol Buffers code
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/formats/protobuf/generated)
+
+execute_process(
+    COMMAND protoc 
+        --proto_path=${CMAKE_CURRENT_SOURCE_DIR}/schemas/protobuf
+        --cpp_out=${CMAKE_CURRENT_SOURCE_DIR}/src/formats/protobuf/generated 
+        ${CMAKE_CURRENT_SOURCE_DIR}/schemas/protobuf/file_storage.proto
+    RESULT_VARIABLE PROTOC_RESULT
+)
+if(NOT "${PROTOC_RESULT}" STREQUAL "0")
+    message(FATAL_ERROR "Failed to generate Protocol Buffers code")
+endif()
+
+# Include generated protobuf headers
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/formats/protobuf/generated
+)
+
+
 # Common source files
 set(COMMON_SOURCES
     src/common/test_data_generator.cpp
@@ -30,8 +50,13 @@ set(XML_SOURCES
     src/formats/xml/xml_serializer.cpp
 )
 
+set(PROTOBUF_SOURCES
+    src/formats/protobuf/protobuf_serializer.cpp
+    src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc
+)
+
 # Main application executable
-add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES} ${JSON_SOURCES} ${XML_SOURCES})
+add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES} ${JSON_SOURCES} ${XML_SOURCES} ${PROTOBUF_SOURCES})
 
 # Link libraries
 target_link_libraries(benchmark_app
@@ -76,4 +101,16 @@ add_executable(xml_serializer_test
 target_link_libraries(xml_serializer_test
     PRIVATE
     pugixml
+)
+
+# Protocol Buffers serializer test
+add_executable(protobuf_serializer_test
+    src/tests/protobuf_serializer_test.cpp
+    ${PROTOBUF_SOURCES}
+    ${COMMON_SOURCES}
+)
+
+target_link_libraries(protobuf_serializer_test
+    PRIVATE
+    ${PROTOBUF_LIBRARIES}
 )
