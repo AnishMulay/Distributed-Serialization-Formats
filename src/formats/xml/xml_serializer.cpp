@@ -2,6 +2,15 @@
 #include <sstream>
 #include <stdexcept>
 
+static const std::string base64_chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    "abcdefghijklmnopqrstuvwxyz"
+    "0123456789+/";
+
+inline bool is_base64(unsigned char c) {
+    return (isalnum(c) || (c == '+') || (c == '/'));
+}
+
 namespace benchmark {
 
 std::vector<uint8_t> XmlSerializer::serialize_metadata(const FileMetadata& metadata) {
@@ -165,63 +174,44 @@ std::string XmlSerializer::base64_encode(const std::vector<uint8_t>& data) {
     return result;
 }
 
-std::vector<uint8_t> XmlSerializer::base64_decode(const std::string& encoded) {
-    static const unsigned char base64_table[256] = {
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 62, 64, 64, 64, 63,
-        52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 64, 64, 64, 64, 64,
-        64,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14,
-        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 64, 64, 64, 64, 64,
-        64, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-        41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
-        64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64
-    };
-    
-    // Calculate the expected size of the decoded data
-    size_t padding = 0;
-    if (encoded.size() >= 2) {
-        if (encoded[encoded.size() - 1] == '=') ++padding;
-        if (encoded[encoded.size() - 2] == '=') ++padding;
-    }
-    
-    size_t decoded_size = ((encoded.size() * 3) / 4) - padding;
-    std::vector<uint8_t> result(decoded_size);
-    
-    uint32_t temp = 0;
-    size_t i = 0, j = 0;
-    
-    while (i < encoded.size()) {
-        unsigned char c = encoded[i++];
-        if (c == '=' || base64_table[c] == 64) break;
-        
-        temp = (temp << 6) | base64_table[c];
-        
-        if (i % 4 == 0) {
-            result[j++] = (temp >> 16) & 0xFF;
-            result[j++] = (temp >> 8) & 0xFF;
-            result[j++] = temp & 0xFF;
-            temp = 0;
+std::vector<uint8_t> XmlSerializer::base64_decode(std::string const& encoded_string) {
+    int in_len = encoded_string.size();
+    int i = 0;
+    int in_ = 0;
+    uint8_t char_array_4[4], char_array_3[3];
+    std::vector<uint8_t> ret;
+
+    while (in_len-- && (encoded_string[in_] != '=') && is_base64(encoded_string[in_])) {
+        char_array_4[i++] = encoded_string[in_]; in_++;
+        if (i ==4) {
+            for (i = 0; i <4; i++)
+                char_array_4[i] = base64_chars.find(char_array_4[i]);
+
+            char_array_3[0] = (char_array_4[0] << 2) + ((char_array_4[1] & 0x30) >> 4);
+            char_array_3[1] = ((char_array_4[1] & 0xf) << 4) + ((char_array_4[2] & 0x3c) >> 2);
+            char_array_3[2] = ((char_array_4[2] & 0x3) << 6) + char_array_4[3];
+
+            for (i = 0; (i < 3); i++)
+                ret.push_back(char_array_3[i]);
+            i = 0;
         }
     }
-    
-    if (i % 4 == 2) {
-        temp = (temp << 12);
-        result[j++] = (temp >> 16) & 0xFF;
-    } else if (i % 4 == 3) {
-        temp = (temp << 6);
-        result[j++] = (temp >> 16) & 0xFF;
-        result[j++] = (temp >> 8) & 0xFF;
+
+    if (i) {
+        for (int j = i; j <4; j++)
+            char_array_4[j] = 0;
+
+        for (int j = 0; j <4; j++)
+            char_array_4[j] = base64_chars.find(char_array_4[j]);
+
+        char_array_3[0] = (char_array_4[0] << 2) + ((char_array_4[1] & 0x30) >> 4);
+        char_array_3[1] = ((char_array_4[1] & 0xf) << 4) + ((char_array_4[2] & 0x3c) >> 2);
+        char_array_3[2] = ((char_array_4[2] & 0x3) << 6) + char_array_4[3];
+
+        for (int j = 0; (j < i - 1); j++) ret.push_back(char_array_3[j]);
     }
-    
-    return result;
+
+    return ret;
 }
 
 } // namespace benchmark

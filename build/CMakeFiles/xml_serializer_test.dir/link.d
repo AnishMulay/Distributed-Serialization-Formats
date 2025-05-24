@@ -1,15 +1,12 @@
-benchmark_app: \
+xml_serializer_test: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
-  CMakeFiles/benchmark_app.dir/src/main.cpp.o \
-  CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o \
-  CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o \
-  CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o \
-  CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o \
-  CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o \
-  /usr/lib/x86_64-linux-gnu/libprotobuf.so \
-  /usr/lib/x86_64-linux-gnu/libmsgpackc.so.2.0.0 \
+  CMakeFiles/xml_serializer_test.dir/src/tests/xml_serializer_test.cpp.o \
+  CMakeFiles/xml_serializer_test.dir/src/formats/xml/xml_serializer.cpp.o \
+  CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.o \
+  CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.o \
+  CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.o \
   /usr/lib/x86_64-linux-gnu/libpugixml.so.1.14 \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
@@ -46,21 +43,15 @@ benchmark_app: \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
-CMakeFiles/benchmark_app.dir/src/main.cpp.o:
+CMakeFiles/xml_serializer_test.dir/src/tests/xml_serializer_test.cpp.o:
 
-CMakeFiles/benchmark_app.dir/src/common/test_data_generator.cpp.o:
+CMakeFiles/xml_serializer_test.dir/src/formats/xml/xml_serializer.cpp.o:
 
-CMakeFiles/benchmark_app.dir/src/common/benchmark_runner.cpp.o:
+CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.o:
 
-CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o:
+CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.o:
 
-CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o:
-
-CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o:
-
-/usr/lib/x86_64-linux-gnu/libprotobuf.so:
-
-/usr/lib/x86_64-linux-gnu/libmsgpackc.so.2.0.0:
+CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libpugixml.so.1.14:
 

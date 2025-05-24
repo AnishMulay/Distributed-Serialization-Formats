@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o.d"
   "CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o"
   "CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o.d"
+  "CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o"
+  "CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o.d"
   "CMakeFiles/benchmark_app.dir/src/main.cpp.o"
   "CMakeFiles/benchmark_app.dir/src/main.cpp.o.d"
   "benchmark_app"

@@ -168,6 +168,19 @@ json_serializer_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/build
 .PHONY : json_serializer_test/fast
 
+#=============================================================================
+# Target rules for targets named xml_serializer_test
+
+# Build rule for target.
+xml_serializer_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xml_serializer_test
+.PHONY : xml_serializer_test
+
+# fast build rule for target.
+xml_serializer_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/build
+.PHONY : xml_serializer_test/fast
+
 src/common/benchmark_runner.o: src/common/benchmark_runner.cpp.o
 .PHONY : src/common/benchmark_runner.o
 
@@ -177,6 +190,7 @@ src/common/benchmark_runner.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/benchmark_runner.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/benchmark_runner.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.o
 .PHONY : src/common/benchmark_runner.cpp.o
 
 src/common/benchmark_runner.i: src/common/benchmark_runner.cpp.i
@@ -188,6 +202,7 @@ src/common/benchmark_runner.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/benchmark_runner.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/benchmark_runner.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.i
 .PHONY : src/common/benchmark_runner.cpp.i
 
 src/common/benchmark_runner.s: src/common/benchmark_runner.cpp.s
@@ -199,6 +214,7 @@ src/common/benchmark_runner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/benchmark_runner.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/benchmark_runner.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/benchmark_runner.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.s
 .PHONY : src/common/benchmark_runner.cpp.s
 
 src/common/test_data_generator.o: src/common/test_data_generator.cpp.o
@@ -210,6 +226,7 @@ src/common/test_data_generator.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/test_data_generator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.o
 .PHONY : src/common/test_data_generator.cpp.o
 
 src/common/test_data_generator.i: src/common/test_data_generator.cpp.i
@@ -221,6 +238,7 @@ src/common/test_data_generator.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/test_data_generator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.i
 .PHONY : src/common/test_data_generator.cpp.i
 
 src/common/test_data_generator.s: src/common/test_data_generator.cpp.s
@@ -232,6 +250,7 @@ src/common/test_data_generator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/test_data_generator.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/test_data_generator.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/test_data_generator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.s
 .PHONY : src/common/test_data_generator.cpp.s
 
 src/common/utilities.o: src/common/utilities.cpp.o
@@ -243,6 +262,7 @@ src/common/utilities.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/utilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/utilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/utilities.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.o
 .PHONY : src/common/utilities.cpp.o
 
 src/common/utilities.i: src/common/utilities.cpp.i
@@ -254,6 +274,7 @@ src/common/utilities.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/utilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/utilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/utilities.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.i
 .PHONY : src/common/utilities.cpp.i
 
 src/common/utilities.s: src/common/utilities.cpp.s
@@ -265,6 +286,7 @@ src/common/utilities.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/common/utilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_runner_test.dir/build.make CMakeFiles/benchmark_runner_test.dir/src/common/utilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/utilities.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.s
 .PHONY : src/common/utilities.cpp.s
 
 src/formats/json/json_serializer.o: src/formats/json/json_serializer.cpp.o
@@ -293,6 +315,33 @@ src/formats/json/json_serializer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/formats/json/json_serializer.cpp.s
 .PHONY : src/formats/json/json_serializer.cpp.s
+
+src/formats/xml/xml_serializer.o: src/formats/xml/xml_serializer.cpp.o
+.PHONY : src/formats/xml/xml_serializer.o
+
+# target to build an object file
+src/formats/xml/xml_serializer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/formats/xml/xml_serializer.cpp.o
+.PHONY : src/formats/xml/xml_serializer.cpp.o
+
+src/formats/xml/xml_serializer.i: src/formats/xml/xml_serializer.cpp.i
+.PHONY : src/formats/xml/xml_serializer.i
+
+# target to preprocess a source file
+src/formats/xml/xml_serializer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/formats/xml/xml_serializer.cpp.i
+.PHONY : src/formats/xml/xml_serializer.cpp.i
+
+src/formats/xml/xml_serializer.s: src/formats/xml/xml_serializer.cpp.s
+.PHONY : src/formats/xml/xml_serializer.s
+
+# target to generate assembly for a file
+src/formats/xml/xml_serializer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/xml/xml_serializer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/formats/xml/xml_serializer.cpp.s
+.PHONY : src/formats/xml/xml_serializer.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -390,6 +439,30 @@ src/tests/test_data_generator_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_data_generator_test.dir/build.make CMakeFiles/test_data_generator_test.dir/src/tests/test_data_generator_test.cpp.s
 .PHONY : src/tests/test_data_generator_test.cpp.s
 
+src/tests/xml_serializer_test.o: src/tests/xml_serializer_test.cpp.o
+.PHONY : src/tests/xml_serializer_test.o
+
+# target to build an object file
+src/tests/xml_serializer_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/tests/xml_serializer_test.cpp.o
+.PHONY : src/tests/xml_serializer_test.cpp.o
+
+src/tests/xml_serializer_test.i: src/tests/xml_serializer_test.cpp.i
+.PHONY : src/tests/xml_serializer_test.i
+
+# target to preprocess a source file
+src/tests/xml_serializer_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/tests/xml_serializer_test.cpp.i
+.PHONY : src/tests/xml_serializer_test.cpp.i
+
+src/tests/xml_serializer_test.s: src/tests/xml_serializer_test.cpp.s
+.PHONY : src/tests/xml_serializer_test.s
+
+# target to generate assembly for a file
+src/tests/xml_serializer_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/tests/xml_serializer_test.cpp.s
+.PHONY : src/tests/xml_serializer_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,6 +475,7 @@ help:
 	@echo "... benchmark_runner_test"
 	@echo "... json_serializer_test"
 	@echo "... test_data_generator_test"
+	@echo "... xml_serializer_test"
 	@echo "... src/common/benchmark_runner.o"
 	@echo "... src/common/benchmark_runner.i"
 	@echo "... src/common/benchmark_runner.s"
@@ -414,6 +488,9 @@ help:
 	@echo "... src/formats/json/json_serializer.o"
 	@echo "... src/formats/json/json_serializer.i"
 	@echo "... src/formats/json/json_serializer.s"
+	@echo "... src/formats/xml/xml_serializer.o"
+	@echo "... src/formats/xml/xml_serializer.i"
+	@echo "... src/formats/xml/xml_serializer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -426,6 +503,9 @@ help:
 	@echo "... src/tests/test_data_generator_test.o"
 	@echo "... src/tests/test_data_generator_test.i"
 	@echo "... src/tests/test_data_generator_test.s"
+	@echo "... src/tests/xml_serializer_test.o"
+	@echo "... src/tests/xml_serializer_test.i"
+	@echo "... src/tests/xml_serializer_test.s"
 .PHONY : help
 
 

@@ -166,4 +166,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_data_generator_test.dir/DependInfo.cmake"
   "CMakeFiles/benchmark_runner_test.dir/DependInfo.cmake"
   "CMakeFiles/json_serializer_test.dir/DependInfo.cmake"
+  "CMakeFiles/xml_serializer_test.dir/DependInfo.cmake"
   )

@@ -26,8 +26,12 @@ set(JSON_SOURCES
     src/formats/json/json_serializer.cpp
 )
 
+set(XML_SOURCES
+    src/formats/xml/xml_serializer.cpp
+)
+
 # Main application executable
-add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES} ${JSON_SOURCES})
+add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES} ${JSON_SOURCES} ${XML_SOURCES})
 
 # Link libraries
 target_link_libraries(benchmark_app
@@ -60,4 +64,16 @@ add_executable(json_serializer_test
 target_link_libraries(json_serializer_test
     PRIVATE
     nlohmann_json::nlohmann_json
+)
+
+# XML serializer test
+add_executable(xml_serializer_test
+    src/tests/xml_serializer_test.cpp
+    ${XML_SOURCES}
+    ${COMMON_SOURCES}
+)
+
+target_link_libraries(xml_serializer_test
+    PRIVATE
+    pugixml
 )
