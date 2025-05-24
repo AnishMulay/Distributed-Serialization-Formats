@@ -168,4 +168,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/json_serializer_test.dir/DependInfo.cmake"
   "CMakeFiles/xml_serializer_test.dir/DependInfo.cmake"
   "CMakeFiles/protobuf_serializer_test.dir/DependInfo.cmake"
+  "CMakeFiles/msgpack_serializer_test.dir/DependInfo.cmake"
   )

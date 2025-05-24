@@ -55,8 +55,12 @@ set(PROTOBUF_SOURCES
     src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc
 )
 
+set(MSGPACK_SOURCES
+    src/formats/msgpack/msgpack_serializer.cpp
+)
+
 # Main application executable
-add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES} ${JSON_SOURCES} ${XML_SOURCES} ${PROTOBUF_SOURCES})
+add_executable(benchmark_app src/main.cpp ${COMMON_SOURCES} ${JSON_SOURCES} ${XML_SOURCES} ${PROTOBUF_SOURCES} ${MSGPACK_SOURCES})
 
 # Link libraries
 target_link_libraries(benchmark_app
@@ -113,4 +117,16 @@ add_executable(protobuf_serializer_test
 target_link_libraries(protobuf_serializer_test
     PRIVATE
     ${PROTOBUF_LIBRARIES}
+)
+
+# MessagePack serializer test
+add_executable(msgpack_serializer_test
+    src/tests/msgpack_serializer_test.cpp
+    ${MSGPACK_SOURCES}
+    ${COMMON_SOURCES}
+)
+
+target_link_libraries(msgpack_serializer_test
+    PRIVATE
+    msgpackc
 )

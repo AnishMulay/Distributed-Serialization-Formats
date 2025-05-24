@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/benchmark_app.dir/src/common/utilities.cpp.o.d"
   "CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o"
   "CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.o.d"
+  "CMakeFiles/benchmark_app.dir/src/formats/msgpack/msgpack_serializer.cpp.o"
+  "CMakeFiles/benchmark_app.dir/src/formats/msgpack/msgpack_serializer.cpp.o.d"
   "CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o"
   "CMakeFiles/benchmark_app.dir/src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o.d"
   "CMakeFiles/benchmark_app.dir/src/formats/protobuf/protobuf_serializer.cpp.o"

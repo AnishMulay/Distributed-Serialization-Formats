@@ -194,6 +194,19 @@ protobuf_serializer_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/build
 .PHONY : protobuf_serializer_test/fast
 
+#=============================================================================
+# Target rules for targets named msgpack_serializer_test
+
+# Build rule for target.
+msgpack_serializer_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgpack_serializer_test
+.PHONY : msgpack_serializer_test
+
+# fast build rule for target.
+msgpack_serializer_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/build
+.PHONY : msgpack_serializer_test/fast
+
 src/common/benchmark_runner.o: src/common/benchmark_runner.cpp.o
 .PHONY : src/common/benchmark_runner.o
 
@@ -205,6 +218,7 @@ src/common/benchmark_runner.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/benchmark_runner.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/benchmark_runner.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/benchmark_runner.cpp.o
 .PHONY : src/common/benchmark_runner.cpp.o
 
 src/common/benchmark_runner.i: src/common/benchmark_runner.cpp.i
@@ -218,6 +232,7 @@ src/common/benchmark_runner.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/benchmark_runner.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/benchmark_runner.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/benchmark_runner.cpp.i
 .PHONY : src/common/benchmark_runner.cpp.i
 
 src/common/benchmark_runner.s: src/common/benchmark_runner.cpp.s
@@ -231,6 +246,7 @@ src/common/benchmark_runner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/benchmark_runner.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/benchmark_runner.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/benchmark_runner.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/benchmark_runner.cpp.s
 .PHONY : src/common/benchmark_runner.cpp.s
 
 src/common/test_data_generator.o: src/common/test_data_generator.cpp.o
@@ -244,6 +260,7 @@ src/common/test_data_generator.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/test_data_generator.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/test_data_generator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/test_data_generator.cpp.o
 .PHONY : src/common/test_data_generator.cpp.o
 
 src/common/test_data_generator.i: src/common/test_data_generator.cpp.i
@@ -257,6 +274,7 @@ src/common/test_data_generator.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/test_data_generator.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/test_data_generator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/test_data_generator.cpp.i
 .PHONY : src/common/test_data_generator.cpp.i
 
 src/common/test_data_generator.s: src/common/test_data_generator.cpp.s
@@ -270,6 +288,7 @@ src/common/test_data_generator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/test_data_generator.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/test_data_generator.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/test_data_generator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/test_data_generator.cpp.s
 .PHONY : src/common/test_data_generator.cpp.s
 
 src/common/utilities.o: src/common/utilities.cpp.o
@@ -283,6 +302,7 @@ src/common/utilities.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/utilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/utilities.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/utilities.cpp.o
 .PHONY : src/common/utilities.cpp.o
 
 src/common/utilities.i: src/common/utilities.cpp.i
@@ -296,6 +316,7 @@ src/common/utilities.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/utilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/utilities.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/utilities.cpp.i
 .PHONY : src/common/utilities.cpp.i
 
 src/common/utilities.s: src/common/utilities.cpp.s
@@ -309,6 +330,7 @@ src/common/utilities.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/common/utilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xml_serializer_test.dir/build.make CMakeFiles/xml_serializer_test.dir/src/common/utilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf_serializer_test.dir/build.make CMakeFiles/protobuf_serializer_test.dir/src/common/utilities.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/common/utilities.cpp.s
 .PHONY : src/common/utilities.cpp.s
 
 src/formats/json/json_serializer.o: src/formats/json/json_serializer.cpp.o
@@ -337,6 +359,33 @@ src/formats/json/json_serializer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/json/json_serializer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/formats/json/json_serializer.cpp.s
 .PHONY : src/formats/json/json_serializer.cpp.s
+
+src/formats/msgpack/msgpack_serializer.o: src/formats/msgpack/msgpack_serializer.cpp.o
+.PHONY : src/formats/msgpack/msgpack_serializer.o
+
+# target to build an object file
+src/formats/msgpack/msgpack_serializer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/msgpack/msgpack_serializer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/formats/msgpack/msgpack_serializer.cpp.o
+.PHONY : src/formats/msgpack/msgpack_serializer.cpp.o
+
+src/formats/msgpack/msgpack_serializer.i: src/formats/msgpack/msgpack_serializer.cpp.i
+.PHONY : src/formats/msgpack/msgpack_serializer.i
+
+# target to preprocess a source file
+src/formats/msgpack/msgpack_serializer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/msgpack/msgpack_serializer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/formats/msgpack/msgpack_serializer.cpp.i
+.PHONY : src/formats/msgpack/msgpack_serializer.cpp.i
+
+src/formats/msgpack/msgpack_serializer.s: src/formats/msgpack/msgpack_serializer.cpp.s
+.PHONY : src/formats/msgpack/msgpack_serializer.s
+
+# target to generate assembly for a file
+src/formats/msgpack/msgpack_serializer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_app.dir/build.make CMakeFiles/benchmark_app.dir/src/formats/msgpack/msgpack_serializer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/formats/msgpack/msgpack_serializer.cpp.s
+.PHONY : src/formats/msgpack/msgpack_serializer.cpp.s
 
 src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.o: src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.cc.o
 .PHONY : src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.o
@@ -491,6 +540,30 @@ src/tests/json_serializer_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/json_serializer_test.dir/build.make CMakeFiles/json_serializer_test.dir/src/tests/json_serializer_test.cpp.s
 .PHONY : src/tests/json_serializer_test.cpp.s
 
+src/tests/msgpack_serializer_test.o: src/tests/msgpack_serializer_test.cpp.o
+.PHONY : src/tests/msgpack_serializer_test.o
+
+# target to build an object file
+src/tests/msgpack_serializer_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/tests/msgpack_serializer_test.cpp.o
+.PHONY : src/tests/msgpack_serializer_test.cpp.o
+
+src/tests/msgpack_serializer_test.i: src/tests/msgpack_serializer_test.cpp.i
+.PHONY : src/tests/msgpack_serializer_test.i
+
+# target to preprocess a source file
+src/tests/msgpack_serializer_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/tests/msgpack_serializer_test.cpp.i
+.PHONY : src/tests/msgpack_serializer_test.cpp.i
+
+src/tests/msgpack_serializer_test.s: src/tests/msgpack_serializer_test.cpp.s
+.PHONY : src/tests/msgpack_serializer_test.s
+
+# target to generate assembly for a file
+src/tests/msgpack_serializer_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgpack_serializer_test.dir/build.make CMakeFiles/msgpack_serializer_test.dir/src/tests/msgpack_serializer_test.cpp.s
+.PHONY : src/tests/msgpack_serializer_test.cpp.s
+
 src/tests/protobuf_serializer_test.o: src/tests/protobuf_serializer_test.cpp.o
 .PHONY : src/tests/protobuf_serializer_test.o
 
@@ -574,6 +647,7 @@ help:
 	@echo "... benchmark_app"
 	@echo "... benchmark_runner_test"
 	@echo "... json_serializer_test"
+	@echo "... msgpack_serializer_test"
 	@echo "... protobuf_serializer_test"
 	@echo "... test_data_generator_test"
 	@echo "... xml_serializer_test"
@@ -589,6 +663,9 @@ help:
 	@echo "... src/formats/json/json_serializer.o"
 	@echo "... src/formats/json/json_serializer.i"
 	@echo "... src/formats/json/json_serializer.s"
+	@echo "... src/formats/msgpack/msgpack_serializer.o"
+	@echo "... src/formats/msgpack/msgpack_serializer.i"
+	@echo "... src/formats/msgpack/msgpack_serializer.s"
 	@echo "... src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.o"
 	@echo "... src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.i"
 	@echo "... src/formats/protobuf/generated/schemas/protobuf/file_storage.pb.s"
@@ -607,6 +684,9 @@ help:
 	@echo "... src/tests/json_serializer_test.o"
 	@echo "... src/tests/json_serializer_test.i"
 	@echo "... src/tests/json_serializer_test.s"
+	@echo "... src/tests/msgpack_serializer_test.o"
+	@echo "... src/tests/msgpack_serializer_test.i"
+	@echo "... src/tests/msgpack_serializer_test.s"
 	@echo "... src/tests/protobuf_serializer_test.o"
 	@echo "... src/tests/protobuf_serializer_test.i"
 	@echo "... src/tests/protobuf_serializer_test.s"
