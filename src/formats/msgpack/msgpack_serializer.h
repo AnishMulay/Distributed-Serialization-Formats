@@ -18,29 +18,12 @@ public:
     FileBlock deserialize_block(const std::vector<uint8_t>& data) override;
 };
 
-// MessagePack adapters for FileMetadata
+} // namespace benchmark
+
+// MessagePack adapters must be in the global msgpack namespace
 namespace msgpack {
 MSGPACK_API_VERSION_NAMESPACE(MSGPACK_DEFAULT_API_NS) {
 namespace adaptor {
-
-template<>
-struct pack<benchmark::FileMetadata> {
-    template <typename Stream>
-    packer<Stream>& operator()(msgpack::packer<Stream>& o, const benchmark::FileMetadata& v) const {
-        // packing member variables as an array
-        o.pack_array(9);
-        o.pack(v.name);
-        o.pack(v.path);
-        o.pack(v.size);
-        o.pack(v.created_at);
-        o.pack(v.last_modified);
-        o.pack(v.tags);
-        o.pack(v.permissions);
-        o.pack(v.owner);
-        o.pack(v.group);
-        return o;
-    }
-};
 
 template<>
 struct convert<benchmark::FileMetadata> {
@@ -62,15 +45,19 @@ struct convert<benchmark::FileMetadata> {
 };
 
 template<>
-struct pack<benchmark::FileBlock> {
+struct pack<benchmark::FileMetadata> {
     template <typename Stream>
-    packer<Stream>& operator()(msgpack::packer<Stream>& o, const benchmark::FileBlock& v) const {
-        // packing member variables as an array
-        o.pack_array(4);
-        o.pack(v.block_id);
-        o.pack(v.offset);
-        o.pack(v.data);
-        o.pack(v.checksum);
+    msgpack::packer<Stream>& operator()(msgpack::packer<Stream>& o, const benchmark::FileMetadata& v) const {
+        o.pack_array(9);
+        o.pack(v.name);
+        o.pack(v.path);
+        o.pack(v.size);
+        o.pack(v.created_at);
+        o.pack(v.last_modified);
+        o.pack(v.tags);
+        o.pack(v.permissions);
+        o.pack(v.owner);
+        o.pack(v.group);
         return o;
     }
 };
@@ -89,8 +76,19 @@ struct convert<benchmark::FileBlock> {
     }
 };
 
+template<>
+struct pack<benchmark::FileBlock> {
+    template <typename Stream>
+    msgpack::packer<Stream>& operator()(msgpack::packer<Stream>& o, const benchmark::FileBlock& v) const {
+        o.pack_array(4);
+        o.pack(v.block_id);
+        o.pack(v.offset);
+        o.pack(v.data);
+        o.pack(v.checksum);
+        return o;
+    }
+};
+
 } // namespace adaptor
 } // MSGPACK_API_VERSION_NAMESPACE(MSGPACK_DEFAULT_API_NS)
 } // namespace msgpack
-
-} // namespace benchmark
